@@ -31,6 +31,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
 app.put('/image', (req, res) => { image.handleImage(req, res, db)})
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
-app.listen(process.env.PORT || 3000, ()=> {
+const DATABASE_URL = process.env.DATABASE_URL
+
+app.listen(3000, ()=> {
   console.log('app is running on port 3000');
 })
